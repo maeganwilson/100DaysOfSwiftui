@@ -6,7 +6,7 @@ All 100 days will be taken from [Hacking With Swift's 100 Days of SwiftUI](https
 
 | Day | Topic | Completed | Link(s) |
 | --- | ----- | --------- | ------- |
-| 1 | variables, simple data types, and string interpolation | ❌ (NO) | None |
+| 1 | [variables, simple data types, and string interpolation](https://www.hackingwithswift.com/100/swiftui/1) | ❌ (NO) | [Notes](https://github.com/maeganjwilson/100DaysOfSwiftui/blob/master/notes/day001.md), [Swift Playground](https://github.com/maeganjwilson/100DaysOfSwiftui/tree/master/days/001.playground) |
 | 2 | arrays, dictionaries, sets, and enums | ❌ (NO) | None |
 | 3 | operators and conditions | ❌ (NO) | None |
 | 4 | loops, loops, and more loops | ❌ (NO) | None |
