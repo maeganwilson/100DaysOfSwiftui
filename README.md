@@ -35,4 +35,34 @@ var age = 38 // this is an integer aka a type of Int
 var population = 8_000_000 // _ can be used as a thousands separator
 ```
 
+### Multi-line strings
+
+Strings can be declared with double quotes, but by doing that then line breaks cannot be included. For multi-line strings, use triple double quotes, `"""`.
+
+``` swift
+var str1 = """
+This goes
+over multiple
+lines
+"""
+```
+
+![Multi-line is multi-line](./images/001_multiline.png)
+
+If formatting across multiple lines, but it is not to be outputted that way, then use a `\`.
+
+``` swift
+var str2 = """
+This goes \
+over multiple \
+lines
+"""
+```
+
+![Multi-line is not multi-line](./images/001_multiline_2.png)
+
+### Doubles and Booleans
+
+
+
 [Back to Table of Contents](#table-of-contents)
