@@ -34,3 +34,5 @@ A number for an age can be stored as an `Int` type. If using large numbers in Sw
 var age = 38 // this is an integer aka a type of Int
 var population = 8_000_000 // _ can be used as a thousands separator
 ```
+
+[Back to top](#table-of-contents)
