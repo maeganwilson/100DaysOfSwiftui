@@ -77,4 +77,42 @@ var pi = 3.14 // type = Double
 var awesome = true // type = Boolean
 ```
 
+### String interpolation
+
+String interpolation = the ability to put variables into strings
+
+To do this: `\(variable_name)`
+
+``` swift
+var score = 85
+var str = "Your score was \(score)" // Your score was 85
+```
+
+### Constants
+
+Used to set a value that never changes and is declared with `let`
+
+``` swift
+let taylor = "swift" // swift
+```
+
+Trying to change the value of a constant will cause an error.
+
+![Error for trying to change value](./images/001_constants_1.png)
+
+If a variable is declared and the value is not changed, Xcode will produce a warning.
+
+### Type annotations
+
+Swift can infer a type based on what the value assigned to the constant/variable is (type inference).
+
+Sometimes this works, but sometimes being specific would be better or help document what you are expecting the type to be. This is done by `var name: type_name` for a variable or `let name: type_name = value` for a constant.
+
+``` swift
+let album: String = "Reputation"
+let year: Int = 1989
+let height: Double = 1.78
+let taylorRocks: Bool = true
+```
+
 [Back to Table of Contents](#table-of-contents)
