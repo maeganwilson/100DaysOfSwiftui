@@ -63,6 +63,18 @@ lines
 
 ### Doubles and Booleans
 
+`Double`s hold decimal numbers like `3.14` or `1.23456781029`.
 
+If declaring a variable with a fractional number (decimal number), then Swift will declare the variable with a `Double` type.
+
+``` swift
+var pi = 3.14 // type = Double
+```
+
+`Boolean`s hold either `true` or `false`.
+
+``` swift
+var awesome = true // type = Boolean
+```
 
 [Back to Table of Contents](#table-of-contents)

@@ -18,3 +18,7 @@ over multiple \
 lines
 """
 print(str2)
+
+var pi = 3.14 // type = Double
+
+var awesome = true // type = Boolean
