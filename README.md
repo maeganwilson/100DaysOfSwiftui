@@ -4,7 +4,8 @@ All 100 days will be taken from [Hacking With Swift's 100 Days of SwiftUI](https
 
 ## Table of Contents
 
-[1. Variables, Simple Data Types, and String interpolation](#1-variables-simple-data-types-and-string-interpolation)
+1. [Variables, Simple Data Types, and String interpolation](#1-variables-simple-data-types-and-string-interpolation)
+2. [Arrays, Dictionaries, Sets, and Enums ](#2-arrays-dictionaries-sets-and-enums)
 
 # Days
 
@@ -116,3 +117,38 @@ let taylorRocks: Bool = true
 ```
 
 [Back to Table of Contents](#table-of-contents)
+
+## 2. Arrays, Dictionaries, Sets, and Enums
+
+**Date: Jan 3, 2021**
+
+### Arrays
+
+Arrays are collections of data in a specific order and are stored as a single value.
+
+Example of an Array with my pets
+
+``` swift
+// values for array
+let thorgi = "Thorgi Wilson"
+let dobby = "Dobby Wilson"
+let cairo = "Cairo Wilson"
+let sydney = "Sydney Wilson"
+
+// creates the array
+let pets = [thorgi, dobby, cairo, sydney]
+```
+
+To retrieve a value from the array, the position of the value is needed. Note, the positions for array start at 0.
+
+Example: get the value of `dobby`
+
+``` swift
+pets[1] // Dobby Wilson
+```
+
+If trying to get a value from a position that doesn't exist, then Swift will crash.
+
+If wanting to give a type to the array, put the type annotation in brackets. The image below shows that calling `pets[6]` gives an index out of range error since there are only 4 positions in `pets`.
+
+![Index out of range error](./images/002_array_1.png)
