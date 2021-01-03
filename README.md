@@ -152,3 +152,38 @@ If trying to get a value from a position that doesn't exist, then Swift will cra
 If wanting to give a type to the array, put the type annotation in brackets. The image below shows that calling `pets[6]` gives an index out of range error since there are only 4 positions in `pets`.
 
 ![Index out of range error](./images/002_array_1.png)
+
+### Sets
+
+Similar to arrays but have two main differences
+
+1. Items are **not** stored in an order and may be returned in a different order
+2. All items must be unique
+
+Create a set by using `Set()` and put a collection of items inside it.
+
+Example:
+
+```swift
+let westNHLTeams = Set(["Ducks", "Blackhawks", "Coyotes", "Avalanche", "Flames", "Stars", "Oilers", "Wild", "Kings", "Predators", "Sharks", "Blues", "Canucks", "Jets", "Golden Knights"])
+```
+
+If you create a set with duplicate items, then the duplicates get ignored.
+
+```swift
+// flames and avalanche are duplicated
+let westNHLTwo = Set(["Ducks", "Blackhawks", "Coyotes", "Avalanche", "Avalanche", "Flames", "Flames", "Stars", "Oilers", "Wild", "Kings", "Predators", "Sharks", "Blues", "Canucks", "Jets", "Golden Knights"])
+
+print(westNHLTeams)
+// ["Blackhawks", "Predators", "Blues", "Stars", "Kings",
+// "Avalanche", "Golden Knights", "Coyotes", "Flames",
+// "Sharks", "Oilers", "Wild", "Ducks", "Canucks", "Jets"]
+
+print(westNHLTeamsTwo)
+// ["Blackhawks", "Predators", "Blues", "Stars", "Kings",
+// "Avalanche", "Golden Knights", "Coyotes", "Flames",
+// "Sharks", "Oilers", "Wild", "Ducks", "Canucks", "Jets"]
+
+```
+
+Notice in the two print statements the outputs are the same.
