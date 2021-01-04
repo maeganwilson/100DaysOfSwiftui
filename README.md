@@ -31,7 +31,7 @@ Swift is a type safe language, which means that each variable has a specific dat
 
 A number for an age can be stored as an `Int` type. If using large numbers in Swift, you can use an `_` as thousands separators and it will not mess up the number.
 
-``` swift
+```swift
 var age = 38 // this is an integer aka a type of Int
 var population = 8_000_000 // _ can be used as a thousands separator
 ```
@@ -40,7 +40,7 @@ var population = 8_000_000 // _ can be used as a thousands separator
 
 Strings can be declared with double quotes, but by doing that then line breaks cannot be included. For multi-line strings, use triple double quotes, `"""`.
 
-``` swift
+```swift
 var str1 = """
 This goes
 over multiple
@@ -52,7 +52,7 @@ lines
 
 If formatting across multiple lines, but it is not to be outputted that way, then use a `\`.
 
-``` swift
+```swift
 var str2 = """
 This goes \
 over multiple \
@@ -68,13 +68,13 @@ lines
 
 If declaring a variable with a fractional number (decimal number), then Swift will declare the variable with a `Double` type.
 
-``` swift
+```swift
 var pi = 3.14 // type = Double
 ```
 
 `Boolean`s hold either `true` or `false`.
 
-``` swift
+```swift
 var awesome = true // type = Boolean
 ```
 
@@ -84,7 +84,7 @@ String interpolation = the ability to put variables into strings
 
 To do this: `\(variable_name)`
 
-``` swift
+```swift
 var score = 85
 var str = "Your score was \(score)" // Your score was 85
 ```
@@ -93,7 +93,7 @@ var str = "Your score was \(score)" // Your score was 85
 
 Used to set a value that never changes and is declared with `let`
 
-``` swift
+```swift
 let taylor = "swift" // swift
 ```
 
@@ -109,7 +109,7 @@ Swift can infer a type based on what the value assigned to the constant/variable
 
 Sometimes this works, but sometimes being specific would be better or help document what you are expecting the type to be. This is done by `var name: type_name` for a variable or `let name: type_name = value` for a constant.
 
-``` swift
+```swift
 let album: String = "Reputation"
 let year: Int = 1989
 let height: Double = 1.78
@@ -128,7 +128,7 @@ Arrays are collections of data in a specific order and are stored as a single va
 
 Example of an Array with my pets
 
-``` swift
+```swift
 // values for array
 let thorgi = "Thorgi Wilson"
 let dobby = "Dobby Wilson"
@@ -143,7 +143,7 @@ To retrieve a value from the array, the position of the value is needed. Note, t
 
 Example: get the value of `dobby`
 
-``` swift
+```swift
 pets[1] // Dobby Wilson
 ```
 
@@ -196,7 +196,7 @@ Store a several values in one value. Tuples are different from arrays because
 2. The type of items in a tuple cannot be changed
 3. Tuple items can be accessed from name or numerical positions. Swift will not let you read numbers or names that don't exist.
 
-``` swift
+```swift
 var name = (first: "Taylor", second: "Swift")
 
 name.0
@@ -218,7 +218,7 @@ Arrays, Sets, and Tpples are a collection of data. Each of them has a specific u
 
 Collections of calues like arrays.
 
-``` swift
+```swift
 let captains = [
     "penguins": "Crosby",
     "wild": "Spurgeon",
@@ -228,14 +228,14 @@ let captains = [
 
 If a key doesn't exist, then you get back nil.
 
-``` swift
+```swift
 captains["penguins"] // Crosby
 captains["ducks"] // nil
 ```
 
 Adding a default value to ducks could be easier to know what your return type will be.
 
-``` swift
+```swift
 let captains = [
     "penguins": "Crosby",
     "wild": "Spurgeon",
@@ -278,7 +278,7 @@ let result3 = Result.failure
 
 Associated values can also have values attached to each case. This allows for cases to be more specific.
 
-``` swift
+```swift
 enum AppleProducts {
     case iPhone(generation: String)
     case laptop(model: String)
@@ -308,7 +308,7 @@ print(Planet.earth.rawValue) // 2
 
 If I assign one or more cases a specific value, Swift will generate the rest.
 
-``` swift
+```swift
 enum Planet: Int {
     case mercury = 1
     case venus
@@ -320,3 +320,93 @@ print(Planet.earth.rawValue) // 3
 ```
 
 [Back to Table of Contents](#table-of-contents)
+
+## 3. Operators and Conditions
+
+### Operators
+
+Mathematical operators used to perform calculations
+
+`+` adds
+`-` subtracts
+`*` multiplies
+`/` divides
+`%` gets remainder value
+
+### Operator Overload
+
+Operator may change based on type of parameters.
+
+`+` can join items like strings or arrays **and** can add two numbers together
+
+Swift is type safe so you can't add a Double to a String
+
+### Compound Operators
+
+AKA shorthand operators.
+
+Performs the operator and then assigns the value.
+
+```swift
+var score = 95
+score -= 5 // scrore is now 90
+```
+
+Works similarly with Strings
+
+```swift
+var quote = "Haters gonna hate "
+quote += "hate hate hate hate" // quote is now `Haters gonna hate hate hate hate hate`
+```
+
+### Comparison Operators
+
+Should work like math.
+
+**Equals**
+
+- `==` checks if the value to the left is equal to the value to the right
+- `!=` checks if the two values are not equal
+
+```swift
+// Comparison
+
+let homeTeam = 5
+let awayTeam = 2
+
+homeTeam == awayTeam // false
+homeTeam != awayTeam // true
+```
+
+**Comparing values**
+
+Same symbols as math
+
+- `<` less than
+- `<=` less than or equal to
+- `>` greater than
+- `>=` greater than or equal to
+
+```swift
+homeTeam < awayTeam // false
+homeTeam <= awayTeam // false
+homeTeam > awayTeam // true
+homeTeam >= awayTeam //true
+```
+
+This alwso works with strings
+
+```swift
+let homeTeamName = "Penguins"
+let awayTeamName = "Wild"
+
+homeTeamName < awayTeamName //true
+homeTeamName <= awayTeamName //true
+homeTeamName > awayTeamName // false
+homeTeamName >= awayTeamName // false
+
+homeTeamName == awayTeamName // false
+homeTeamName != awayTeamName // true
+```
+
+### Conditions
