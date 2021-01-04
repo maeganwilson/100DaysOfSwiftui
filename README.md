@@ -187,3 +187,136 @@ print(westNHLTeamsTwo)
 ```
 
 Notice in the two print statements the outputs are the same.
+
+### Tuples
+
+Store a several values in one value. Tuples are different from arrays because
+
+1. Tuples are fixed in size
+2. The type of items in a tuple cannot be changed
+3. Tuple items can be accessed from name or numerical positions. Swift will not let you read numbers or names that don't exist.
+
+``` swift
+var name = (first: "Taylor", second: "Swift")
+
+name.0
+name.first
+```
+
+![Tuple examles](./images/002_tupple_2.png)
+
+### When to use each?
+
+Arrays, Sets, and Tpples are a collection of data. Each of them has a specific use case.
+
+- Tuples should be used when each item has a precise position or name
+- Sets should be used when every value in the collection is unique
+- Arrays should be use when order matters and or you need duplicates
+  - Arrays are also the most common data type
+
+### Dictionaries
+
+Collections of calues like arrays.
+
+``` swift
+let captains = [
+    "penguins": "Crosby",
+    "wild": "Spurgeon",
+    "sharks": "Couture"
+]
+```
+
+If a key doesn't exist, then you get back nil.
+
+``` swift
+captains["penguins"] // Crosby
+captains["ducks"] // nil
+```
+
+Adding a default value to ducks could be easier to know what your return type will be.
+
+``` swift
+let captains = [
+    "penguins": "Crosby",
+    "wild": "Spurgeon",
+    "sharks": "Couture",
+    "ducks": "unknown"
+]
+
+captains["penguins"] // Crosby
+captains["ducks"] // unknown
+```
+
+### Empty Collections
+
+Empty collections can be made by providing type annotations.
+
+```swift
+var emptyArray: [String]
+var emptyDictionary: [String: Int]
+var emptySet = Set<String>()
+```
+
+### Enumerations (enums)
+
+Define related values in a way that is easier to use.
+Can keep you from using different strings.
+
+```swift
+let result1 = "failure"
+let result2 = "failed"
+
+enum Result {
+    case failure
+    case success
+}
+
+let result3 = Result.failure
+```
+
+`result1`, `result2`, `result3` are failures but because 1 and 2 are different strings it would be hard to check if it failed. By using the enum for `result3`, we can always get the same thing back.
+
+Associated values can also have values attached to each case. This allows for cases to be more specific.
+
+``` swift
+enum AppleProducts {
+    case iPhone(generation: String)
+    case laptop(model: String)
+}
+
+let maegansPhone = AppleProducts.iPhone(generation: "12 Pro Max")
+let katiesLaptop = AppleProducts.laptop(model: "MacBook Pro")
+
+```
+
+Enums can have raw values also which allows them to have more meaning.
+
+```swift
+enum Planet: Int {
+    case mercury
+    case venus
+    case earth
+    case mars
+}
+```
+
+Swift will automatically give values starting at 0 because the enum type is `Int`.
+
+```swift
+print(Planet.earth.rawValue) // 2
+```
+
+If I assign one or more cases a specific value, Swift will generate the rest.
+
+``` swift
+enum Planet: Int {
+    case mercury = 1
+    case venus
+    case earth
+    case mars
+}
+
+print(Planet.earth.rawValue) // 3
+```
+
+[Back to Table of Contents](#table-of-contents)
