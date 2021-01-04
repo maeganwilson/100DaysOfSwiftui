@@ -410,3 +410,31 @@ homeTeamName != awayTeamName // true
 ```
 
 ### Conditions
+
+Can use if and comparisons to output or execute specific code
+
+```swift
+let red = 8_000_000
+let reputation = 4_500_000
+
+if reputation == red {
+    print("red and reputation are the same")
+} else if red > reputation {
+    print("Red sold more albums")
+} else {
+    print("Reputation sold more albums")
+}
+
+// PRINT -> Red sold more albums
+```
+
+Can combine conditions if needed like in age checks
+
+```swift
+let age1 = 12
+let age2 = 21
+
+if age1 > 18 && age2 > 18 {
+    print("Both are over 18")
+}
+```

@@ -43,3 +43,16 @@ homeTeamName < awayTeamName
 homeTeamName <= awayTeamName
 homeTeamName > awayTeamName
 homeTeamName >= awayTeamName
+
+// CONDITIONS
+
+let red = 8_000_000
+let reputation = 4_500_000
+
+if reputation == red {
+    print("red and reputation are the same")
+} else if red > reputation {
+    print("Red sold more albums")
+} else {
+    print("Reputation sold more albums")
+}
