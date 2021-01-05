@@ -438,3 +438,70 @@ if age1 > 18 && age2 > 18 {
     print("Both are over 18")
 }
 ```
+
+**Ternary Operator**
+
+Rarely used operator that uses 3 values at once.
+
+1st value = condition
+2nd value = something when condition is true
+3rd value = something when condition is false
+
+Written like this: `condition ? true : false `
+
+```swift
+print(red > reputation ? "Red sold more albums" : "Reputation sold more albums")
+// Red sold more albums
+```
+
+### Switch Statements
+
+Switch statemens can be used for conditions also, and might be a cleaner way to construct them.
+
+```swift
+let album = "Fearless"
+switch album {
+case "Fearless":
+    print("\(12_000_000)")
+case "Red":
+    print("\(red)")
+case "Reputation":
+    print("\(reputation)")
+default:
+    print("UNKNOWN ALBUM no sales available")
+}
+```
+
+This is cleaner to read than the if else statements.
+
+### Range Operators
+
+Two ways to make a range
+
+- `..<` creates a range that excludes the final value
+- `...` creates a range that includes the final value
+
+```swift
+0..<4 // 0, 1, 2, 3
+0...4 // 0, 1, 2, 3, 4
+```
+
+Useful in switches
+
+```swift
+let lover = 3_200_000
+
+switch lover {
+case 0..<1_000:
+    print("Not enough sold")
+case 1_000..<3_200_000:
+    print("Not enough sold")
+case 3_200_000..<4_000_000:
+    print("Just enough sold")
+default:
+    print("Too many album sales")
+}
+// Just enough sold
+```
+
+Way easier to do a range than an individual case for each integer.

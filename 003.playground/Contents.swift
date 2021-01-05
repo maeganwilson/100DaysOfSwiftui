@@ -56,3 +56,38 @@ if reputation == red {
 } else {
     print("Reputation sold more albums")
 }
+
+// Ternary
+
+print(red > reputation ? "Red sold more albums" : "Reputation sold more albums")
+
+// SWITCH
+
+let album = "Fearless"
+switch album {
+case "Fearless":
+    print("\(12_000_000)")
+case "Red":
+    print("\(red)")
+case "Reputation":
+    print("\(reputation)")
+default:
+    print("UNKNOWN ALBUM no sales available")
+}
+
+// RANGES
+0..<4
+0...4
+
+let lover = 3_200_000
+
+switch lover {
+case 0..<1_000:
+    print("Not enough sold")
+case 1_000..<3_200_000:
+    print("Not enough sold")
+case 3_200_000..<4_000_000:
+    print("Just enough sold")
+default:
+    print("Too many album sales")
+}
