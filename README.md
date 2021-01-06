@@ -6,6 +6,8 @@ All 100 days will be taken from [Hacking With Swift's 100 Days of SwiftUI](https
 
 1. [Variables, Simple Data Types, and String interpolation](#1-variables-simple-data-types-and-string-interpolation)
 2. [Arrays, Dictionaries, Sets, and Enums ](#2-arrays-dictionaries-sets-and-enums)
+3. Conditions
+4. Loops
 
 # Days
 
@@ -505,3 +507,167 @@ default:
 ```
 
 Way easier to do a range than an individual case for each integer.
+
+## Loops
+
+**Date: Jan 5, 2020**
+
+### For Loops
+
+Most common type. Used to iterate over objects in arrays and ranges. Each time the loop iterates, then one item is pulled and assigned to a constant to be used in the loop.
+
+```swift
+// Number example
+
+let count = 1...5
+for number in count {
+  print("number is \(number)")
+}
+/*
+1
+2
+3
+4
+5
+*/
+
+// Array example
+let westNHLTeams = ["Ducks", "Blackhawks", "Coyotes", "Avalanche", "Flames", "Stars", "Oilers", "Wild", "Kings", "Predators", "Sharks", "Blues", "Canucks", "Jets", "Golden Knights"]
+
+for team in westNHLTeams {
+    print("team is \(team)")
+}
+/*
+team is Ducks
+team is Blackhawks
+team is Coyotes
+team is Avalanche
+team is Flames
+team is Stars
+team is Oilers
+team is Wild
+team is Kings
+team is Predators
+team is Sharks
+team is Blues
+team is Canucks
+team is Jets
+team is Golden Knights
+*/
+```
+
+If the constant isn't needed in the loop, use an `_` to ignore it.
+
+```swift
+print("Players gonna ")
+
+for _ in 1...5 {
+    print("play")
+}
+/*
+Players gonna
+play
+play
+play
+play
+play
+/*
+```
+
+### While Loops
+
+While loops run until a condition fails.
+
+```swift
+var number = 1
+
+while number <= 20 {
+    print(number)
+    number += 1
+}
+
+print("Ready or not, here I come!")
+```
+
+### Repeat Loop
+
+Like a while loop, but the condition to check comes at the end
+
+Code inside loop will run at least once where as in a while loop the loop might never run.
+
+```swift
+number = 1
+
+repeat {
+    print(number)
+    number += 1
+} while number <= 20
+
+print("Ready or not, here I come!")
+```
+
+### Exiting Loops
+
+Use `break` to exit a loop at any time.
+
+```swift
+while timesThorgiShouldEat >= 0 {
+    print(timesThorgiShouldEat)
+
+    if timesThorgiShouldEat == 2 {
+        print("Thorgi is on a diet")
+        break;
+    }
+
+    timesThorgiShouldEat -= 1
+}
+```
+
+Breaking out of nested loops is possible if the outer loop has a label.
+
+```swift
+outerLoop: for i in 1...10 {
+    for j in 1...10 {
+        let product = i * j
+        print ("\(i) * \(j) is \(product)")
+
+        if product == 50 {
+            print("It's a bullseye!")
+            break outerLoop
+        }
+    }
+}
+```
+
+### Skip items
+
+Use continue to skip items
+
+```swift
+for i in 1...10 {
+    if i % 2 == 1 {
+        continue // skips odds
+    }
+    print(i)
+}
+```
+
+### Infinite Loops
+
+All apps use infinite loops to continually watch.
+
+Use `true` to cause an infinite loop.
+
+```swift
+var counter = 0
+while true {
+    print("Hi")
+    counter += 1
+
+    if counter == 27 {
+        break
+    }
+}
+```
+
+If doing this on purpose, make sure there is a way to break out of the loop at some point.
