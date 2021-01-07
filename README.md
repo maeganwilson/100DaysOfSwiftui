@@ -671,3 +671,41 @@ while true {
 ```
 
 If doing this on purpose, make sure there is a way to break out of the loop at some point.
+
+## Functions, Parameters, and Errors
+
+**Date January 7, 2020**
+
+### Functions
+
+Start with `func` to tell swift that a function is happening, then you need a name and then code inside brackets.
+
+Call the function by functionName and `()`
+
+```swift
+func didMyTeamWin(){
+    let decision = false;
+    if decision == true {
+        print("YES, the team won!")
+    } else {
+        print("NO, the team lost :(")
+    }
+}
+
+didMyTeamWin()
+```
+
+Make function more useful by adding in parameters.
+
+```swift
+func didMyTeamWin(teamWon: Bool){
+//    let decision = false;
+    if teamWon == true {
+        print("YES, the team won!")
+    } else {
+        print("NO, the team lost :(")
+    }
+}
+
+didMyTeamWin(teamWon: true)
+```
