@@ -56,17 +56,31 @@ brewProgress.amount = 80
 brewProgress.amount = 100
 
 // METHODS
+//
+//struct Dog {
+//    var breed: String
+//    var age: Int
+//
+//    func humanYears() -> Int {
+//        return (age * 7)
+//    }
+//}
+//
+//let thorgi = Dog(breed: "Corgi", age: 5)
+//thorgi.humanYears()
+
+// Mutating Methods
 
 struct Dog {
     var breed: String
     var age: Int
     
-    func humanYears() -> Int {
-        return (age * 7)
+    mutating func birthday(){
+        age = (age + 1)
     }
 }
 
-let thorgi = Dog(breed: "Corgi", age: 5)
-thorgi.humanYears()
+var thorgi = Dog(breed: "Corgi", age: 5)
+thorgi.birthday()
 
-//
+
