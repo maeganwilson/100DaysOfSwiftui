@@ -54,3 +54,19 @@ brewProgress.amount = 20
 brewProgress.amount = 50
 brewProgress.amount = 80
 brewProgress.amount = 100
+
+// METHODS
+
+struct Dog {
+    var breed: String
+    var age: Int
+    
+    func humanYears() -> Int {
+        return (age * 7)
+    }
+}
+
+let thorgi = Dog(breed: "Corgi", age: 5)
+thorgi.humanYears()
+
+//
