@@ -709,3 +709,9 @@ func didMyTeamWin(teamWon: Bool){
 
 didMyTeamWin(teamWon: true)
 ```
+
+---
+
+Well I forgot to take notes for days 5 through 8, so here is Day 9!
+
+## Day 9: Structs Part 2
