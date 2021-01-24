@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @State private var showingScore = false
     @State private var scoreTitle = ""
+    @State private var score = 0
+    @State private var totalQuestions = 1
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"]
     @State private var correctAnswer = Int.random(in: 0...2)
     
@@ -38,7 +40,7 @@ struct ContentView: View {
                 Spacer()
             }
         }.alert(isPresented: $showingScore) {
-            Alert(title: Text(scoreTitle), message: Text("Your score is ???"), dismissButton: .default(Text("Continue")) {
+            Alert(title: Text(scoreTitle), message: Text("Your score is \(score) out of \(totalQuestions)"), dismissButton: .default(Text("Continue")) {
                 self.askQuestion()
             })
         }
@@ -51,6 +53,8 @@ struct ContentView: View {
     func flagTapped(_ number: Int) {
         if number == correctAnswer {
             scoreTitle = "Correct"
+            score = score + 1
+            totalQuestions = totalQuestions + 1
         } else {
             scoreTitle = "Wrong"
         }
